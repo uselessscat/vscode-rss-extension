@@ -14,12 +14,31 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "rss-viewer",
+					"title": "RSS Viewer",
+					"icon": "media/rss.svg"
+				}
+			]
+		},
+		"views": {
+			"rss-viewer": [
+				{
+					"id": "unread",
+					"name": "Unreads"
+				},
+				{
+					"id": "tags",
+					"name": "Tags"
+				},
+				{
+					"id": "origins",
+					"name": "Origins"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
