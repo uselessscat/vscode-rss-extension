@@ -10,10 +10,19 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onView:nodeDependencies",
+		"onView:unread",
+		"onView:tags",
+		"onView:origins"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		],
 		"viewsContainers": {
 			"activitybar": [
 				{
@@ -36,6 +45,10 @@
 				{
 					"id": "origins",
 					"name": "Origins"
+				},
+				{
+					"id": "nodeDependencies",
+					"name": "Node Dependencies"
 				}
 			]
 		}
